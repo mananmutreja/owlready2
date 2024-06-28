@@ -1,0 +1,10 @@
+@prefix : <http://example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Rule: If a professor teaches a course, then the course is taught by the professor.
+Professor(?p) ^ teaches(?p, ?c) -> Course(?c) ^ taughtBy(?c, ?p)
